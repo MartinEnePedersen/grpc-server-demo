@@ -20,4 +20,5 @@ message Article {
   string content = 3;
   string tag = 4;
   string seo_title = 5;
+  string sub_title = 6;
 }
