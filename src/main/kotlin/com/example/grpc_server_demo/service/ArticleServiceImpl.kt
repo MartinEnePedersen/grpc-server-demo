@@ -11,9 +11,9 @@ import org.springframework.stereotype.Service
 class ArticleServiceImpl : ArticleServiceGrpc.ArticleServiceImplBase() {
 
     private val mockedArticles = listOf(
-        Article.newBuilder().setId(1).setTitle("Kotlin Basics").setContent("Learn the basics of Kotlin").build(),
-        Article.newBuilder().setId(2).setTitle("Spring Boot with Kotlin").setContent("How to build a Spring Boot app using Kotlin").build(),
-        Article.newBuilder().setId(3).setTitle("gRPC Introduction").setContent("Getting started with gRPC in Java/Kotlin").build()
+        Article.newBuilder().setId(1).setTitle("Kotlin Basics").setContent("Learn the basics of Kotlin").setTag("plus-article").build(),
+        Article.newBuilder().setId(2).setTitle("Spring Boot with Kotlin").setContent("How to build a Spring Boot app using Kotlin").setTag("normal").build(),
+        Article.newBuilder().setId(3).setTitle("gRPC Introduction").setContent("Getting started with gRPC in Java/Kotlin").setTag("normal").build()
     )
 
     override fun getArticles(request: ArticleRequest, responseObserver: StreamObserver<ArticleResponse>) {
